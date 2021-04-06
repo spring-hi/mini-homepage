@@ -1,0 +1,255 @@
+/* 변수 */
+:root {
+    /* size */
+    --spacing-small:5px;
+    --spacing: 10px;
+    --spacing-large: 15px;
+    /* color */
+    --grey-light-color: #bdbdbd;
+}
+
+/* /리셋/  */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+/* body */
+
+body {
+    margin: 0;
+    background-color: #e0e0e0;
+    background-image: url(./images/pattern.png);
+    background-size: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* bookcover */
+.bookcover {
+    width: 960px;
+    height: 660px;
+    position: relative;
+    background-color: #ffcdd2;
+    margin: 100px auto;
+    border-radius: 10px;
+    border: 1px solid #738186;
+}
+
+/* bookdot */
+.bookdot {
+    position: absolute;
+    border-radius: 10px;
+    border: 2px dashed white;
+    top: 13px;
+    bottom:13px;
+    left: 13px;
+    right: 13px;
+}
+
+/* page */
+.page {
+    position: absolute;
+    border-radius: 10px;
+    background-color: #ffffff;
+    top: 13px;
+    bottom: 13px;
+    left: 13px;
+    right: 13px;
+
+    display: flex;
+    padding: 10px 15px 15px 15px;
+    box-sizing: border-box;
+}
+
+/* profile-container - 왼쪽 프로필 레이아웃*/
+
+.profile-container {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: var(--spacing-large);
+    box-sizing: border-box;
+}
+
+/* profile-title - 상단 방문자  */
+.profile-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.1;
+}
+
+.profile-title span {
+    padding-right: var(--spacing-small);
+}
+
+.txt-red {
+    color: red;
+}
+
+/* profile-box - 기분,프로필 사진,텍스트 */
+.profile-box {
+    flex: 1.5;
+    background-color: white;
+    border: 1px solid var(--grey-light-color);
+    border-radius: 15px;
+    padding: var(--spacing-large);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-today {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid var(--grey-light-color);
+    border-radius: 3px;
+    padding: 3px;
+    margin-bottom: var(--spacing);
+}
+
+.profile-box img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: var(--spacing);
+}
+
+/* 프로필 하단 - 이름, 파도타기 */
+
+.profile-bottom {
+    border-top: 1px dashed var(--grey-light-color);
+    padding-top: var(--spacing-large);
+}
+
+/* 파도타기 */
+.dropdown-box{
+    position: relative;
+}
+
+.dropdown-btn{
+    width: 100%;
+    padding: 5px;
+    margin-top: var(--spacing-large);
+    border: 1px solid var(--grey-light-color);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid var(--grey-light-color);
+    top: 0;
+}
+
+/* 파도타기 hover */
+
+.dropdown-box:hover > .dropdown-content {
+    display: block;  
+}
+
+.dropdown-content > a{
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    display: inline-block;
+
+}
+
+.dropdown-content > a:hover {
+    background-color: #ffebee;
+}
+
+
+/* content-container - 메인 컨텐츠 레이아웃 */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2.6;
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.1;
+    padding: 0 var(--spacing);
+}
+
+.content-box {
+    flex: 1.5;
+    background-color: white;
+    border: 1px solid var(--grey-light-color);
+    border-radius: 15px;
+    padding: var(--spacing-large);
+    position: relative;
+}
+
+/* menu-container - 메뉴 레이아웃*/
+.menu-container {
+    flex: 0.4;
+    padding-top: 70px;
+    /* border: 1px solid var(--grey-light-color); */
+}
+.menu-btn{
+    display: inline-block;
+    background-color: #ef9a9a;
+    width: 80%;
+    padding: 7px;
+    border-radius: 0 7px 7px 0;
+    color: white;
+    margin-bottom: var(--spacing);
+
+}
+
+.menu-btn:hover {
+    background-color: #bbdefb;
+}
+
+
+/* 공통 요소, 변수 */
+.txt-blue {
+    color: #64b5f6;
+}
+
+.txt-red {
+    color: red;
+}
+
+/* 스크롤바 영역*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* 스크롤바 전체 배경 */
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+/* 움직이는 스크롤 */
+::-webkit-scrollbar-thumb { 
+    background: #fce4ec; 
+    border-radius: 10px;
+}
+/* 상하단 버튼 */
+::-webkit-scrollbar-button { 
+    display: none;
+}

@@ -1,0 +1,108 @@
+/* guestbook-scroll -- 스크롤 가능한 박스 만들기 */
+
+.guestbook-scroll {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* content-box에 position: relative; */
+    margin: var(--spacing-large);
+    padding-right: var(--spacing-large);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+/* geustbook-head 방명록 상단 */
+
+.geustbook-head {
+    background-color: #eeeeee;
+    border-top: 1px solid var(--grey-light-color);
+    padding: var(--spacing-small) var(--spacing-large);
+    font-size: 12px;
+    color: #424242;
+}
+
+.geustbook-head span {
+    margin: 0 var(--spacing-large);
+}
+.geustbook-head i {
+    color: #ffa726;
+}
+
+/* geustbook-content - 미니미 이미지, 방명록 텍스트 */
+
+.geustbook-content {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-large);
+}
+
+.minimi-img {
+    flex-basis: 6rem;
+    height: 7rem;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing-large);
+}
+
+.backgorund-1 {
+    background-image: url(./images/미니미배경1.jpg);
+    border: 1px dashed var(--grey-light-color);
+    border-radius: 5px;
+}
+
+.backgorund-2 {
+    background-image: url(./images/미니미배경2.jpg);
+    border: 1px dashed var(--grey-light-color);
+    border-radius: 5px;
+}
+.backgorund-3 {
+    background-image: url(./images/미니미배경3.jpg);
+    border: 1px dashed var(--grey-light-color);
+    border-radius: 5px;
+}
+
+/* diary-comment - 댓글*/
+
+.diary-comment {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: var(--spacing) var(--spacing-large);
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.diary-comment span {
+    color: grey;
+    margin-right: var(--spacing-small);
+}
+
+.diary-comment textarea {
+    padding: 3px;
+    margin-right: var(--spacing);
+    width: 90%;
+    height: 2.5rem;
+
+    color: gray;
+    resize: none;
+}
+
+.diary-comment .comment-btn {
+    outline: none;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 8%;
+    padding: 1px 2px 3px 2px;
+    margin: 0;
+
+    background: white;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
